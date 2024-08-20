@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Arrow from "./story_component_ui_elements/images/Story_Img_Arrow_Component";
+import LinkMore from "../shared_ui_components/Link_MoreComponent";
+
 export default function Story() {
   return (
     <div className="relative w-screen">
@@ -22,14 +23,7 @@ export default function Story() {
             others.
           </div>
 
-          <div className=" w-[168px] h-[16px] flex justify-between items-center">
-            <div className="text-[12px] font-bold tracking-[2px]">
-              GET AN INVITE
-            </div>
-            <div className="">
-              <Arrow />
-            </div>
-          </div>
+          <LinkMore linkText={'get an invite'}/>
         </div>
       </div>
     </div>
