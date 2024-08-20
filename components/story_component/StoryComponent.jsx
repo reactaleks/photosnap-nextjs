@@ -22,8 +22,9 @@ export default function Story() {
             We make it easy to share photos, tell stories and connect with
             others.
           </div>
-
-          <LinkMore linkText={'get an invite'}/>
+          <div className="w-[205px]">
+            <LinkMore linkText={"get an invite"} />
+          </div>
         </div>
       </div>
     </div>
