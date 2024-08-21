@@ -9,7 +9,7 @@ export default function NavMenuItems({navMenuOpen}) {
   const componentLst = menuItems.map((item, index) => {
     return (
       <div key={index} className="hover:opacity-30 cursor-pointer tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
-        {item}
+        <Link href={`/${item.toLowerCase()}`}>{item}</Link>
       </div>
     )
   })

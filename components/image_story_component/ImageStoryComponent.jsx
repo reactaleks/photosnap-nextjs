@@ -1,6 +1,6 @@
 import LinkMore from "../shared_ui_components/Link_MoreComponent";
 import Image from "next/image";
-export default function ImageStory() {
+export default function ImageStory({numberToDisplay}) {
   const storyData = [
     {
       link: "/assets/stories/desktop/mountains.jpg",
@@ -34,9 +34,106 @@ export default function ImageStory() {
       title: "Architecturals",
       author: "by Samantha Brooke",
     },
+
+    {
+      link: "/assets/stories/desktop/world-tour.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "World Tour 2019",
+      author: "by Timothy Wagner",
+    },
+    {
+      link: "/assets/stories/desktop/unforeseen-corners.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Unforeseen Corners",
+      author: "by William Malcolm",
+    },
+    {
+      link: "/assets/stories/desktop/king-on-africa.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "King on Africa: Part II",
+      author: "by Tim Hillenburg",
+    },
+    {
+      link: "/assets/stories/desktop/rage-of-the-sea.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Rage of The Sea",
+      author: "by Mohammed Abdul",
+    },
+    {
+      link: "/assets/stories/desktop/running-free.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Running Free",
+      author: "by Michelle",
+    },
+    {
+      link: "/assets/stories/desktop/trip-to-nowhere.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "The Trip to Nowhere",
+      author: "by Felicia Rourke",
+    },
+    {
+      link: "/assets/stories/desktop/behind-the-waves.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Behind the Waves",
+      author: "by Lamarr Wilson",
+    },
+    {
+      link: "/assets/stories/desktop/calm-waters.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Calm Waters",
+      author: "by Samantha Brooke",
+    },
+    {
+      link: "/assets/stories/desktop/milky-way.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "The Milky Way",
+      author: "by Benjamin Cruz",
+    },
+    {
+      link: "/assets/stories/desktop/dark-forest.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Night at The Dark Forest",
+      author: "by  Mohammed Abdul",
+    },
+    {
+      link: "/assets/stories/desktop/somwarpet.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Somwarpet’s Beauty",
+      author: "by Michelle",
+    },
+    {
+      link: "/assets/stories/desktop/land-of-dreams.jpg",
+      height: 500,
+      width: 360,
+      alt: "",
+      title: "Land of Dreams",
+      author: "by William Malcolm",
+    },
   ];
 
-  const componentList = storyData.map((item, index) => {
+  const componentList = storyData.slice(0, numberToDisplay).map((item, index) => {
     return (
       <div
         key={index}
@@ -60,7 +157,7 @@ export default function ImageStory() {
           <div className="w-[310px] h-[1px] bg-white bg-opacity-25"></div>
           <LinkMore linkText={"read story"} />
         </div>
-        <div className="w-full h-[6px] md:group-hover:block absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]"></div>
+        <div className="w-full h-[6px] md:group-hover:block cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]"></div>
       </div>
     );
   });
