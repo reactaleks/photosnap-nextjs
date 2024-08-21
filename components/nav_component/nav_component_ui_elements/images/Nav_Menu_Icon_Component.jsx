@@ -6,6 +6,8 @@ export default function NavMenuIcon({ navMenuOpen, openNavMenu }) {
         width="20"
         height="6"
         onClick={openNavMenu}
+        className="md:hidden"
+
       >
         <g fillRule="evenodd">
           <path d="M0 0h20v1H0zM0 5h20v1H0z" />
@@ -19,6 +21,7 @@ export default function NavMenuIcon({ navMenuOpen, openNavMenu }) {
         width="16"
         height="15"
         onClick={openNavMenu}
+        className="md:hidden"
       >
         <path
           fillRule="evenodd"
