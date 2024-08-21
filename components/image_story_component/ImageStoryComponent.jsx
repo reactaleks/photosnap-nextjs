@@ -144,7 +144,7 @@ export default function ImageStory({numberToDisplay}) {
           className="object-cover w-full h-full brightness-50"
           width={item.width}
           height={item.height}
-          alt={item.alt}
+          alt={'item.alt'}
         />
         <div className="absolute bottom-12 text-white w-[310px] h-[99px] flex flex-col justify-around">
           <div className="flex flex-col">
