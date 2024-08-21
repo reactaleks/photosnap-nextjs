@@ -37,7 +37,7 @@ export default function PlanComparison() {
   const componentList = comparisonData.map((item, index) => {
     return (
       <>
-        <div className="h-[112px] flex flex-col justify-around md:flex-row  items-center md:justify-around relative ">
+        <div key={index} className="h-[112px] flex flex-col justify-around md:flex-row  items-center md:justify-around relative ">
           <div className="text-[12px] font-bold  w-full md:w-full tracking-[2px] uppercase ">
             {item.title}
           </div>
@@ -134,9 +134,9 @@ export default function PlanComparison() {
     <div className="w-[318px] md:w-[90vw] xl:w-[50vw] mx-auto">
       <div className="text-[12px] tracking-[2px] font-bold uppercase flex justify-between md:grid md:grid-cols-2">
         <div className=""> The Features</div>
-        <div className="flex w-80">
-          <div className=" items-center hidden md:grid md:grid-cols-3 md:w-[50vw] ">
-            <div className="flex justify-center ">basic</div>
+        <div className="flex">
+          <div className="items-center hidden md:grid md:grid-cols-3 md:w-full">
+            <div className="flex justify-center">basic</div>
             <div className="flex justify-center ">pro</div>
             <div className="flex justify-center ">business</div>
           </div>

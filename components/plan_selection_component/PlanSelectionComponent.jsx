@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../shared_ui_components/ButtonComponent";
 export default function PlanSelection() {
   const [enabled, setEnabled] = useState(false);
-
+  
   const switchControl = () => {
     setEnabled(!enabled);
   };
@@ -28,22 +28,22 @@ export default function PlanSelection() {
       ppm: "99.00",
     },
   ];
-
+  console.log(typeof(parseInt(planData[0].ppm)))
   const componentList = planData.map((item, index) => {
     return (
       <div
         key={index}
-        className={`w-[318px] h-[407px] flex flex-col justify-around items-center text-center ${
+        className={`w-[318px] h-[407px] md:w-[90vw] flex flex-col justify-around items-center text-center ${
           index == 1 ? "bg-black text-white xl:h-[470px] xl:mx-6" : "bg-[#F5F5F5]"
-        }  my-6 relative`}
+        }  my-6 relative md:grid md:grid-cols-12 md:grid-rows-12 xl:w-[350px]`}
       >
         <div
-          className={`w-full h-[6px] ${
+          className={`w-full h-[6px] md:w-[6px] md:h-full md:left-0 ${
             index == 1 ? "block" : "hidden"
           } absolute  top-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]`}
         ></div>
 
-        <div className="h-[118px] w-[275px] flex flex-col justify-between">
+        <div className="h-[118px] w-[275px] flex flex-col justify-between md:text-start md:grid-col-span-4 md:row-start-5 md:col-start-2 xl:text-center xl:row-start-3 xl:col-span-10 xl:col-start-2 xl:row-span-3">
           <div className="text-[24px] leading-[25px] font-bold">
             {item.title}
           </div>
@@ -52,13 +52,14 @@ export default function PlanSelection() {
           </div>
         </div>
 
-        <div className="">
+        <div className="md:col-span-2 md:col-start-10 md:row-start-4 xl:row-start-7 xl:col-start-4 xl:col-span-6">
           <div className="text-[40px] leading-[48px] tracking-[4.17px] font-bold">
-            {"$" + item.ppm}
+            {enabled ? "$" + parseInt(item.ppm).toFixed(2) * 12 : "$" + item.ppm}
           </div>
-          <div className="text-[15px] opacity-60">per month</div>
+          <div className="text-[15px] opacity-60">{enabled ? 'Per year' : 'Per month'}</div>
         </div>
-        <div className="w-[245px] h-[40px]">
+
+        <div className="w-[245px] h-[40px] md:row-start-10 md:col-start-2 xl:col-start-3 xl:row-start-10">
           <Button btnText={"pick plan"} darkMode={index == 1 ? true : false}/>
         </div>
       </div>
@@ -66,7 +67,6 @@ export default function PlanSelection() {
   });
   return (
     <div className="flex flex-col items-center justify-center h-auto py-14">
-      {/* Plan selector */}
       <div className="flex w-[255px] justify-between text-[18px] font-bold items-center mx-auto">
         <div className="">Monthly</div>
         <div className="">
