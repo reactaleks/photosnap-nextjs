@@ -12,11 +12,11 @@ export default function Footer() {
       <div className="flex items-center justify-center col-span-6 col-start-4 row-start-3 md:justify-start md:col-start-2 md:row-start-10 md:col-span-3">
         <SocialIcons />
       </div>
-      <div className="flex items-center justify-center col-span-6 col-start-4 row-start-6 md:col-start-2 md:col-span-5 ">
+      <div className="flex items-center justify-center col-span-6 col-start-4 row-start-6 md:col-start-2 md:col-span-5 xl:col-span-1 xl:col-start-4 xl:row-span-7 xl:row-start-4">
         <FooterNav />
       </div>
 
-      <div className="flex items-center justify-center col-span-6 col-start-4 row-start-10 md:row-start-4 md:col-start-9 md:col-span-3">
+      <div className="flex items-center justify-center col-span-6 col-start-4 row-start-10 md:row-start-4 md:col-start-9 md:col-span-3 xl:col-span-1 xl:col-start-11">
         <LinkMore linkText={"get an invite"} />
       </div>
 

@@ -38,10 +38,10 @@ export default function ImageStory() {
   ]
 
   const componentList = storyData.map((item, index) => { 
-    return <div key={index} className="w-full h-[375px] flex flex-col relative items-center">
+    return <div key={index} className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative items-center">
       <Image
         src={item.link}
-        className="w-full h-[375px] object-cover brightness-50"
+        className="object-cover w-full h-full brightness-50"
         width={item.width}
         height={item.height}
         alt={item.alt}
@@ -59,7 +59,7 @@ export default function ImageStory() {
   })
 
   return (
-    <div className="md:grid md:grid-cols-2">
+    <div className="md:grid md:grid-cols-2 xl:grid-cols-4">
         {componentList}
     </div>
   );
