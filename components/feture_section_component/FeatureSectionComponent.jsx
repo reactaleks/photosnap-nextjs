@@ -52,7 +52,7 @@ export default function FeatureSection({featuresToShow}) {
 
 
     return (
-        <div className="flex flex-col items-center justify-center py-16 text-center xl:flex-row">
+        <div className={`flex flex-col items-center justify-center py-16 text-center ${componentList.length > 3 ? ' md:mx-auto md:grid md:grid-cols-2 xl:grid-cols-3': '' }  xl:flex-row`}>
             {componentList}
         </div>
     )

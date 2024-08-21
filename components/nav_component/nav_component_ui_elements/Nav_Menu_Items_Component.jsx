@@ -23,7 +23,10 @@ export default function NavMenuItems({navMenuOpen}) {
     >
       {componentLst}
       <div className="w-[310px] h-[1px] bg-black md:hidden"></div>
-      <Button btnText={'Get an invite'}/>
+      <div className="w-[310px] h-[48px] md:w-[148px] md:h-[40px]">
+        <Button btnText={'Get an invite'}/>
+
+      </div>
     </div>
   );
 }

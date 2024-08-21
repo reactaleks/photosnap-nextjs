@@ -1,3 +1,5 @@
+import CallToAction from "@/components/call_to_action_component/CallToActionComponent";
+import PlanSelection from "@/components/plan_selection_component/PlanSelectionComponent";
 import Story from "@/components/story_component/StoryComponent";
 export default function Home() {
     const storyData = [
@@ -14,6 +16,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
         <Story storyData={storyData}/>
+        <PlanSelection/>
+        <CallToAction/>
     </main>
   );
 }

@@ -1,6 +1,6 @@
-export default function Button({btnText}) {
+export default function Button({btnText, darkMode}) {
   return (
-    <div className="hover:bg-gray-100 cursor-pointer hover:text-black w-[310px] h-[48px] md:w-[158px] md:h-[40px] flex items-center justify-center text-white font-bold  tracking-[2.5px] bg-black">
+    <div className={` uppercase ${darkMode ? ' bg-white  text-black ' :  'text-white bg-black hover:text-black'} hover:bg-[#DFDFDF] cursor-pointer h-full w-full flex items-center justify-center  font-bold  tracking-[2.5px] `}>
       {btnText}
     </div>
   );
