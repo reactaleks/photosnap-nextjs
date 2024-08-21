@@ -1,6 +1,6 @@
 export default function SocialIcons() {
   return (
-    <div className="w-[154px] flex justify-around">
+    <div className="w-[154px] flex justify-around md:justify-between">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
         <defs>
           <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">

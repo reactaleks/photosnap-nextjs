@@ -59,8 +59,8 @@ export default function ImageStory() {
   })
 
   return (
-    <>
+    <div className="md:grid md:grid-cols-2">
         {componentList}
-    </>
+    </div>
   );
 }

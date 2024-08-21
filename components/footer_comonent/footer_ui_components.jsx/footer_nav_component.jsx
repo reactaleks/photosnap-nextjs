@@ -1,18 +1,18 @@
 export default function FooterNav() {
   return (
     <div
-      className={`w-[310px] h-[121px] flex flex-col items-center justify-around text-white`}
+      className={`w-[310px] h-[121px] md:w-full md:h-[16px] text-[15px] md:text-[12px] font-bold uppercase  tracking-[2.5px] flex flex-col items-center justify-around text-white md:flex-row md:justify-between`}
     >
-      <div className="text-[15px] tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] flex items-center justify-center">
+      <div className="  w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
         Home
       </div>
-      <div className="text-[15px] tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] flex items-center justify-center">
+      <div className=" w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
         Stories
       </div>
-      <div className="text-[15px] tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] flex items-center justify-center">
+      <div className="  w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
         Features
       </div>
-      <div className="text-[15px] tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] flex items-center justify-center">
+      <div className="   w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
         Pricing
       </div>
     </div>
