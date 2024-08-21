@@ -7,11 +7,13 @@ export default function Footer() {
   return (
     <footer className="w-full h-[539px] bg-black flex flex-col items-center justify-evenly text-white">
       <Logo darkMode={true} />
-      <SocialIcons/>
+      <SocialIcons />
       <FooterNav />
-      <LinkMore linkText={'get an invite'}/>
+      <div className="w-[172px]">
+        <LinkMore linkText={"get an invite"} />
+      </div>
 
       <div className="opacity-50">Copyright 2019. All Rights Reserved</div>
     </footer>
   );
-}
+} 

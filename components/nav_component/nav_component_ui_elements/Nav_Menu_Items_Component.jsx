@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavMenuItems({navMenuOpen}) {
   return (
     <div
-      className={` h-[253px] w-screen  flex-col absolute bg-white left-0 top-[72px] z-20 items-center justify-around ${
+      className={` h-[253px] w-full  flex-col absolute bg-white left-0 top-[72px] z-20 items-center justify-around ${
         !navMenuOpen ? "hidden" : "flex"
       }`}
     >

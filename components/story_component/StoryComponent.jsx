@@ -3,7 +3,7 @@ import LinkMore from "../shared_ui_components/Link_MoreComponent";
 
 export default function Story() {
   return (
-    <div className="relative w-screen">
+    <div className="relative w-full">
       <Image
         src={"/assets/home/desktop/create-and-share.jpg"}
         width={830}
