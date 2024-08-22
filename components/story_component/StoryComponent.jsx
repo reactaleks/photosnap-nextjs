@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LinkMore from "../shared_ui_components/Link_MoreComponent";
 
-export default function Story({ storyData, expanded }) {
+export default function Story({ storyData, expanded, storyPage }) {
   const componentList = storyData.map((item, index) => {
     if (!expanded) {
       return (
@@ -42,7 +42,7 @@ export default function Story({ storyData, expanded }) {
               <div className="text-[15px] leading-[25px] opacity-60">
                 {item.storyDescription}
               </div>
-              <div className="w-[205px]">
+              <div className={`w-[205px] ${storyPage ? 'block' : 'hidden'}`}>
                 <LinkMore linkText={item.linkText} />
               </div>
             </div>

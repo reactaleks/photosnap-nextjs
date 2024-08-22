@@ -15,7 +15,7 @@ export default function Home() {
       ]
   return (
     <main className="min-h-screen">
-        <Story storyData={storyData}/>
+        <Story storyData={storyData} expanded={false} storyPage={false}/>
         <FeatureSection/>
         <CallToAction/>
     </main>
