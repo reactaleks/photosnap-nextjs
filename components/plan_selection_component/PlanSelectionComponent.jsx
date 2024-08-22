@@ -28,7 +28,6 @@ export default function PlanSelection() {
       ppm: "99.00",
     },
   ];
-  console.log(typeof(parseInt(planData[0].ppm)))
   const componentList = planData.map((item, index) => {
     return (
       <div
@@ -52,9 +51,9 @@ export default function PlanSelection() {
           </div>
         </div>
 
-        <div className="md:col-span-2 md:col-start-10 md:row-start-4 xl:row-start-7 xl:col-start-4 xl:col-span-6">
+        <div className="md:col-span-2 md:col-start-9 md:row-start-4 xl:row-start-7 xl:col-start-4 xl:col-span-6">
           <div className="text-[40px] leading-[48px] tracking-[4.17px] font-bold">
-            {enabled ? "$" + parseInt(item.ppm).toFixed(2) * 12 : "$" + item.ppm}
+            {enabled ? "$" + (parseInt(item.ppm) * 12).toFixed(2) : "$" + item.ppm}
           </div>
           <div className="text-[15px] opacity-60">{enabled ? 'Per year' : 'Per month'}</div>
         </div>
@@ -68,21 +67,21 @@ export default function PlanSelection() {
   return (
     <div className="flex flex-col items-center justify-center h-auto py-14">
       <div className="flex w-[255px] justify-between text-[18px] font-bold items-center mx-auto">
-        <div className="">Monthly</div>
+        <div className={`${!enabled ? 'opacity-100' : 'opacity-50'}`} >Monthly</div>
         <div className="">
           <button
             onClick={switchControl}
-            className={`group relative flex h-[20px] w-[40px] cursor-pointer rounded-full bg-[#979797]  p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1`}
+            className={`group relative flex h-[32px] w-[64px] cursor-pointer rounded-full bg-[#979797]  p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1`}
           >
             <span
               aria-hidden="true"
-              className={`pointer-events-none inline-block size-3 translate-x-0 rounded-full bg-white ring-0 shadow-lg transition duration-200 ease-in-out ${
-                enabled ? "translate-x-5" : "translate-x-0"
+              className={`pointer-events-none inline-block size-6 translate-x-0 rounded-full bg-white ring-0 shadow-lg transition duration-200 ease-in-out ${
+                enabled ? "translate-x-8" : "translate-x-0"
               }`}
             />
           </button>
         </div>
-        <div className="">Yearly</div>
+        <div className={`${enabled ? 'opacity-100' : 'opacity-50'}`}>Yearly</div>
       </div>
 
       <div className="xl:flex xl:flex-row xl:items-center">{componentList}</div>
