@@ -227,7 +227,7 @@ export default function ImageStory({numberToDisplay, expanded}) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
-        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around md:hidden md:group-hover:flex">
+        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around ">
           <div className="flex flex-col">
             <div className={`text-[13px] ${expanded ? 'block' : 'hidden'}`}>{convertDateFormat(item.datePublished)}</div>
             <div className="text-[18px] leading-[25px] font-bold">
