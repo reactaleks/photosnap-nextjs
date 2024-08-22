@@ -1,6 +1,8 @@
+'use client'
 import LinkMore from "../shared_ui_components/Link_MoreComponent";
 import Image from "next/image";
-export default function ImageStory({numberToDisplay}) {
+import { motion } from "framer-motion";
+export default function ImageStory({numberToDisplay, expanded}) {
   const storyData = [
     {
       link: "/assets/stories/desktop/mountains.jpg",
@@ -210,21 +212,24 @@ export default function ImageStory({numberToDisplay}) {
 
   const componentList = storyData.slice(0, numberToDisplay).map((item, index) => {
     return (
-      <div
+      <motion.div
         key={index}
-        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative md:hover:bottom-12 items-center group"
+        whileHover={{y: -25}}
+        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative  items-center group mk md:hover:rounded-bl-full"
       >
+        
         <Image
           src={item.link}
-          className="object-cover w-full h-full brightness-50"
-          width={item.width}
-          height={item.height}
+          className="object-cover brightness-[80%]"
+
           alt={'item.alt'}
           priority
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
-        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around">
+        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around ">
           <div className="flex flex-col">
-            <div className="text-[13px]">{convertDateFormat(item.datePublished)}</div>
+            <div className={`text-[13px] ${expanded ? 'block' : 'hidden'}`}>{convertDateFormat(item.datePublished)}</div>
             <div className="text-[18px] leading-[25px] font-bold">
               {item.title}
             </div>
@@ -232,10 +237,14 @@ export default function ImageStory({numberToDisplay}) {
           </div>
 
           <div className="w-full h-[1px] bg-white bg-opacity-25"></div>
-          <LinkMore linkText={"read story"} />
+          <motion.div>
+            <LinkMore linkText={"read story"} />
+          </motion.div>
         </div>
-        <div className="w-full h-[6px] md:group-hover:block cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]"></div>
-      </div>
+        <motion.div className="w-full h-[6px]  cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]">
+
+        </motion.div>
+      </motion.div>
     );
   });
 

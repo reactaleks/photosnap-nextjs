@@ -58,7 +58,7 @@ export default function PlanSelection() {
           <div className="text-[15px] opacity-60">{enabled ? 'Per year' : 'Per month'}</div>
         </div>
 
-        <div className="w-[245px] h-[40px] md:row-start-10 md:col-start-2 xl:col-start-3 xl:row-start-10">
+        <div className="w-[245px] h-[40px] md:row-start-10 md:col-start-2 xl:col-start-3 xl:row-start-10 ">
           <Button btnText={"pick plan"} darkMode={index == 1 ? true : false}/>
         </div>
       </div>

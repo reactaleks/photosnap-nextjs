@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className='font-dmsans'>
+    <html lang="en" className="scroll-smooth">
+      <body className='font-dmsans '>
         <Navigation/>
         {children}
         

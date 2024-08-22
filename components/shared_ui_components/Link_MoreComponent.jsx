@@ -1,3 +1,5 @@
+'use client'
+import { motion } from "framer-motion";
 import Arrow from "./shared_images/Img_Arrow_Component";
 export default function LinkMore({linkText}) {
   return (

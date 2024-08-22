@@ -14,8 +14,8 @@ export default function Home() {
       ]
   return (
     <main className="min-h-screen">
-        <Story storyData={storyData} expanded={true}/>
-        <ImageStory numberToDisplay={16}/>
+        <Story storyData={storyData} expanded={true} storyPage={true}/>
+        <ImageStory numberToDisplay={16} expanded={true}/>
     </main>
   );
 }
