@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Navigation() {
     return (
         <nav className="w-full h-[72px] flex justify-between items-center px-6 relative">
-            <Link href={'/'}>
+            <Link href={'/'} aria-label="home">
             <Logo darkMode={false}/>
 
             </Link>
