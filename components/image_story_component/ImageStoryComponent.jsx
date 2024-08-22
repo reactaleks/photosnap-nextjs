@@ -215,7 +215,7 @@ export default function ImageStory({numberToDisplay, expanded}) {
       <motion.div
         key={index}
         whileHover={{y: -25}}
-        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative  items-center group"
+        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative  items-center group mk md:hover:rounded-bl-full"
       >
         
         <Image
@@ -241,7 +241,7 @@ export default function ImageStory({numberToDisplay, expanded}) {
             <LinkMore linkText={"read story"} />
           </motion.div>
         </div>
-        <motion.div className="w-full h-[6px] md:group-hover:block cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]">
+        <motion.div className="w-full h-[6px]  cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]">
 
         </motion.div>
       </motion.div>
