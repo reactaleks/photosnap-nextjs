@@ -16,7 +16,7 @@ export default function NavMenu() {
     return (
         <div className="md:flex">
             <NavMenuIcon navMenuOpen={navMenuOpen} openNavMenu={openNavMenu}/>
-            <NavMenuItems  navMenuOpen={navMenuOpen}/>
+            <NavMenuItems  navMenuOpen={navMenuOpen} openNavMenu={openNavMenu}/>
         </div>
     )
 }

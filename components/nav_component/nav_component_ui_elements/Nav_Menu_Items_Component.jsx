@@ -1,14 +1,14 @@
 import Button from "@/components/shared_ui_components/ButtonComponent";
 import Link from "next/link";
 
-export default function NavMenuItems({navMenuOpen}) {
+export default function NavMenuItems({navMenuOpen, openNavMenu}) {
   const menuItems = [
     'Stories', 'Features', 'Pricing'
   ]
 
   const componentLst = menuItems.map((item, index) => {
     return (
-      <div key={index} className="hover:opacity-30 cursor-pointer tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
+      <div key={index} onClick={openNavMenu}  className="hover:opacity-30 cursor-pointer tracking-[2.5px] font-bold uppercase w-[310px] h-[20px] md:w-[61px] md:h-[16px] flex items-center justify-center">
         <Link href={`/${item.toLowerCase()}`}>{item}</Link>
       </div>
     )
