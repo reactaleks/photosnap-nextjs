@@ -36,7 +36,6 @@ export default function PlanComparison() {
 
   const componentList = comparisonData.map((item, index) => {
     return (
-      <>
         <div key={index} className="h-[112px] flex flex-col justify-around md:flex-row  items-center md:justify-around relative ">
           <div className="text-[12px] font-bold  w-full md:w-full tracking-[2px] uppercase ">
             {item.title}
@@ -126,7 +125,6 @@ export default function PlanComparison() {
           </div>
           <div className="w-full h-[1px] bg-[#D8D8D8] bg-opacity-25 md:absolute md:bottom-0 md:bg-opacity-75"></div>
         </div>
-      </>
     );
   });
 

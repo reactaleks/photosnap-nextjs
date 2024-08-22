@@ -1,5 +1,7 @@
+'use client'
 import LinkMore from "../shared_ui_components/Link_MoreComponent";
 import Image from "next/image";
+import { motion } from "framer-motion";
 export default function ImageStory({numberToDisplay, expanded}) {
   const storyData = [
     {
@@ -210,10 +212,12 @@ export default function ImageStory({numberToDisplay, expanded}) {
 
   const componentList = storyData.slice(0, numberToDisplay).map((item, index) => {
     return (
-      <div
+      <motion.div
         key={index}
-        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative md:hover:bottom-12 items-center group"
+        whileHover={{y: -25}}
+        className="w-full h-[375px] md:h-[500px] xl:w-auto flex flex-col relative  items-center group"
       >
+        
         <Image
           src={item.link}
           className="object-cover brightness-[80%]"
@@ -223,7 +227,7 @@ export default function ImageStory({numberToDisplay, expanded}) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
-        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around">
+        <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around md:hidden md:group-hover:flex">
           <div className="flex flex-col">
             <div className={`text-[13px] ${expanded ? 'block' : 'hidden'}`}>{convertDateFormat(item.datePublished)}</div>
             <div className="text-[18px] leading-[25px] font-bold">
@@ -233,10 +237,14 @@ export default function ImageStory({numberToDisplay, expanded}) {
           </div>
 
           <div className="w-full h-[1px] bg-white bg-opacity-25"></div>
-          <LinkMore linkText={"read story"} />
+          <motion.div>
+            <LinkMore linkText={"read story"} />
+          </motion.div>
         </div>
-        <div className="w-full h-[6px] md:group-hover:block cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]"></div>
-      </div>
+        <motion.div className="w-full h-[6px] md:group-hover:block cursor-pointer absolute hidden bottom-0 bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]">
+
+        </motion.div>
+      </motion.div>
     );
   });
 
