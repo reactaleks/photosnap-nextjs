@@ -3,6 +3,7 @@ import LinkMore from "../shared_ui_components/Link_MoreComponent";
 
 export default function Story({ storyData, expanded, storyPage }) {
   const componentList = storyData.map((item, index) => {
+    // Normal story
     if (!expanded) {
       return (
         <div
@@ -14,7 +15,7 @@ export default function Story({ storyData, expanded, storyPage }) {
             width={item.imageWidth}
             height={item.imageHeight}
             alt=""
-            className={`object-cover w-screen md:h-full xl:h-[650px] md:col-span-4 ${
+            className={`object-cover w-screen h-[317px] md:h-full xl:h-[650px] md:col-span-4 ${
               index % 2 == 0
                 ? "md:col-start-9 xl:col-start-6"
                 : "md:col-start-1 "
@@ -35,8 +36,8 @@ export default function Story({ storyData, expanded, storyPage }) {
               } w-[128px] h-[6px]  absolute top-0 left-8 md:top-auto md:left-0 md:h-[304px] md:w-[6px] bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]`}
             ></div>
 
-            <div className="w-[318px] h-[275px] flex flex-col justify-around m-auto">
-              <div className="text-[32px] font-bold tracking-[3.33px] leading-[40px] uppercase">
+            <div className="w-[318px] h-[275px] xl:w-[387px] flex flex-col justify-around xl:justify-center m-auto">
+              <div className="text-[32px] xl:text-[40px] xl:tracking-[4.17px] font-bold tracking-[3.33px] leading-[40px] uppercase">
                 {item.storyTitle}
               </div>
               <div className="text-[15px] leading-[25px] opacity-60">
@@ -50,6 +51,7 @@ export default function Story({ storyData, expanded, storyPage }) {
         </div>
       );
     } else {
+      // Expanded story
       return (
         <div
           className="relative w-full md:grid md:grid-cols-12 md:h-[650px] "
@@ -73,9 +75,9 @@ export default function Story({ storyData, expanded, storyPage }) {
           >
 
 
-          <div className="w-[318px] h-[275px] md:h-[408px] flex flex-col justify-around m-auto absolute text-white left-6 md:left-24  md:top-36">
+          <div className="w-[318px] h-[275px] md:h-[408px] xl:w-[387px] flex flex-col justify-around m-auto absolute text-white left-6 md:left-24  md:top-36">
             <div className="test-[12px] tracking-[2px] uppercase font-bold">LAST MONTH’S FEATURED STORY</div>
-            <div className="text-[32px] font-bold tracking-[3.33px] leading-[40px] uppercase">
+            <div className="text-[32px] xl:text-[40px] xl:tracking-[4.17px] font-bold tracking-[3.33px] leading-[40px] uppercase">
               {item.storyTitle}
             </div>
             <div className="text-[15px] leading-[25px] opacity-60">

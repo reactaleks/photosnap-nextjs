@@ -216,7 +216,7 @@ export default function ImageStory({numberToDisplay, expanded}) {
       >
         <Image
           src={item.link}
-          className="object-cover w-full h-full brightness-50"
+          className="object-cover w-full h-full brightness-[80%]"
           width={item.width}
           height={item.height}
           alt={'item.alt'}
