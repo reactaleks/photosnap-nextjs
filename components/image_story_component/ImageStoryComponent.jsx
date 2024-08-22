@@ -1,6 +1,6 @@
 import LinkMore from "../shared_ui_components/Link_MoreComponent";
 import Image from "next/image";
-export default function ImageStory({numberToDisplay}) {
+export default function ImageStory({numberToDisplay, expanded}) {
   const storyData = [
     {
       link: "/assets/stories/desktop/mountains.jpg",
@@ -224,7 +224,7 @@ export default function ImageStory({numberToDisplay}) {
         />
         <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around">
           <div className="flex flex-col">
-            <div className="text-[13px]">{convertDateFormat(item.datePublished)}</div>
+            <div className={`text-[13px] ${expanded ? 'block' : 'hidden'}`}>{convertDateFormat(item.datePublished)}</div>
             <div className="text-[18px] leading-[25px] font-bold">
               {item.title}
             </div>
