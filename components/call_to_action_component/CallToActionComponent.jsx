@@ -18,9 +18,10 @@ export default function CallToAction() {
       <Image
         src={"/assets/shared/desktop/bg-beta.jpg"}
         alt=""
-        width={1440}
-        height={280}
-        className="object-fill w-full h-full"
+        className="object-fill -z-20 aspect-auto"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
+        fill
+        priority
       />
     </div>
   );

@@ -216,11 +216,12 @@ export default function ImageStory({numberToDisplay, expanded}) {
       >
         <Image
           src={item.link}
-          className="object-cover w-full h-full brightness-[80%]"
-          width={item.width}
-          height={item.height}
+          className="object-cover brightness-[80%]"
+
           alt={'item.alt'}
           priority
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
         <div className="absolute bottom-12 text-white w-[310px] h-[99px] md:w-[90%] flex flex-col justify-around">
           <div className="flex flex-col">

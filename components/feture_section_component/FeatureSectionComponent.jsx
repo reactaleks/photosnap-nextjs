@@ -32,7 +32,7 @@ export default function FeatureSection({featuresToShow}) {
         },
         {
             'link':'/assets/features/desktop/boost-exposure.svg',
-            'iconWidth': 71,
+            'iconWidth': 72,
             'iconHeight': 72,
             'title': 'Boost Your Exposure',
             'description': 'Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.'
