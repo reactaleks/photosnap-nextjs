@@ -78,7 +78,7 @@ export default function Story({ storyData, expanded, storyPage }) {
             width={item.imageWidth}
             height={item.imageHeight}
             alt=""
-            className={`object-cover aspect-auto w-screen h-[317px] md:h-full xl:h-[650px] md:col-span-12`}
+            className={`object-cover aspect-auto w-full h-[317px] md:h-full xl:h-[650px] md:col-span-12`}
             priority
           />
           <div
