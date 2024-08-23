@@ -31,13 +31,14 @@ export default function Story({ storyData, expanded, storyPage }) {
               index % 2 == 0
                 ? "md:col-start-9 xl:col-start-6"
                 : "md:col-start-1 "
-            } xl:col-span-7`}
+            } xl:col-span-7 relative`}
           >
             <Image
               src={item.imageLink}
-              width={item.imageWidth}
-              height={item.imageHeight}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"	
               alt=""
+              priority
               className={`object-cover h-[100%] w-[100%] aspect-auto`}
             />
           </motion.div>
@@ -61,7 +62,7 @@ export default function Story({ storyData, expanded, storyPage }) {
               } w-[128px] h-[6px]  absolute top-0 left-8 md:top-auto md:left-0 md:h-[304px] md:w-[6px] bg-gradient-to-tr from-[#FFC593] from-0% via-[#BC7198] via-45% to-[#5A77FF]`}
             ></div>
 
-            <StoryContent item={item} storPage={storyPage} />
+            <StoryContent item={item} storyPage={storyPage} />
           </motion.div>
         </div>
       );
@@ -77,7 +78,7 @@ export default function Story({ storyData, expanded, storyPage }) {
             width={item.imageWidth}
             height={item.imageHeight}
             alt=""
-            className={`object-cover w-screen h-[317px] md:h-full xl:h-[650px] md:col-span-12`}
+            className={`object-cover aspect-auto w-screen h-[317px] md:h-full xl:h-[650px] md:col-span-12`}
             priority
           />
           <div
